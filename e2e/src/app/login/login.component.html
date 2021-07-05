@@ -1,0 +1,41 @@
+
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <h4>Login to create your blog</h4>
+        <form (ngSubmit)="onFormSubmit(f)" #f="ngForm">
+          
+          <div id="user-data">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                class="form-control"
+                ngModel
+                name="username"
+            
+                #username="ngModel"
+              />
+              <label for="username">Password</label>
+              <input
+                type="text"
+                id="password"
+                class="form-control"
+                ngModel
+                name="password"
+                
+                #username="ngModel"
+              />
+              <button class="btn btn-primary" type="submit">
+                Submit
+              </button>
+            </div>
+         </div>
+        </form>
+       </div> 
+    </div>
+</div>    
+
+

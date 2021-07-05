@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-8 offset-md-2 bg-light" *ngIf="blogDetails">
+        <p><strong>title : </strong> {{ blogDetails.title }}</p>
+        <p><strong> Contents : </strong> {{ blogDetails.content}}</p>
+      </div>
+      <div class="col-md-12" *ngIf="!blogDetails">
+        <h3 class="text-danger text-center">
+          blog with this id does not exists
+        </h3>
+      </div>
+    </div>
+</div>
+<div>
+      <h3>Edit</h3>
+      <form (ngSubmit)="editSubmit(f.value)" #f="ngForm">
+          <label>title</label>
+          <!--<input type="text" value={{blogDetails.title}}>-->
+          <input
+                type="text"
+                id="title"
+                class="form-control"
+                ngModel
+                
+                name="title"
+            
+                #title="ngModel"
+              />
+              <button class="btn btn-primary" type="submit">
+                Submit
+              </button>
+      </form>
+      
+</div>

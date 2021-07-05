@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        
+        <hr />
+        <app-create
+          (blogcreated)="AddBlog($event)"
+      
+        ></app-create>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        
+        <app-blogs></app-blogs>
+      </div>
+    </div>
+  </div>

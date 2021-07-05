@@ -1,0 +1,44 @@
+<!-- <p *ngIf=blogsservice.isLoggedIn()>hai</p> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+  <div class="container">
+    <a class="navbar-brand" href="#">Welcome </a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/loginn">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf=blogsservice.isLoggedIn() routerLink="/create">Create your Blog</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" *ngIf=blogsservice.isLoggedIn() routerLink="#">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<!--
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+      <hr />
+      <app-create
+        (blogcreated)="AddBlog($event)"
+    
+      ></app-create>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      
+      <app-blogs></app-blogs>
+    </div>
+  </div>
+</div>-->
